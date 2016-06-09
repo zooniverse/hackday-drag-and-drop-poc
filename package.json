@@ -28,10 +28,12 @@
     "debug": "^2.2.0",
     "drag-drop": "^2.11.0",
     "express": "^4.13.4",
+    "jade": "^1.11.0",
     "nib": "^1.1.0",
     "parallel": "^1.0.10",
     "path": "^0.12.7",
     "pretty-bytes": "^3.0.1",
+    "run-parallel": "^1.1.6",
     "stylus": "^0.54.5",
     "upload-element": "^1.0.1"
   },
