@@ -1,0 +1,43 @@
+{
+  "name": "hackday-drag-and-drop-poc",
+  "version": "1.0.0",
+  "description": "Testing out drag and drop stuff",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build-css && npm run build-js",
+    "build-css": "stylus -u nib css/main.styl -o static/ -c",
+    "build-js": "browserify client > static/bundle.js",
+    "start": "npm run build && node server",
+    "watch": "npm run watch-css & npm run watch-js & DEBUG=instant* nodemon server",
+    "watch-css": "stylus -u nib css/main.styl -o static/ -w",
+    "watch-js": "watchify client -o static/bundle.js -dv",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zooniverse/hackday-drag-and-drop-poc.git"
+  },
+  "author": "Alex Bowyer",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/zooniverse/hackday-drag-and-drop-poc/issues"
+  },
+  "homepage": "https://github.com/zooniverse/hackday-drag-and-drop-poc#readme",
+  "dependencies": {
+    "browserify": "^13.0.1",
+    "debug": "^2.2.0",
+    "drag-drop": "^2.11.0",
+    "express": "^4.13.4",
+    "nib": "^1.1.0",
+    "parallel": "^1.0.10",
+    "path": "^0.12.7",
+    "pretty-bytes": "^3.0.1",
+    "stylus": "^0.54.5",
+    "upload-element": "^1.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2",
+    "standard": "^7.1.2",
+    "watchify": "^3.7.0"
+  }
+}

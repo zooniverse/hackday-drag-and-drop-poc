@@ -1,0 +1,15 @@
+extends layout
+
+block body
+  main
+    h1 Test drag and drop files
+    h2#logHeading(style='display: none') Log
+    .speed
+    .log
+
+    p
+      | Drag-and-drop a file (or files). Or choose a file:
+      | #{ ' ' }
+      input(type='file', name='upload', multiple)
+
+     p: small Run <code>localStorage.debug = '*'</code> in the console and refresh to see the files received. Chrome only at the moment?
